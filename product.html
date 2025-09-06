@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muntaha Sports - Products</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -20,10 +19,6 @@
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-    }
-
     nav {
       margin-top: 10px;
     }
@@ -35,35 +30,59 @@
       font-weight: bold;
     }
 
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .products-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 20px;
+      padding: 0 20px;
     }
 
     .product {
       background: #fff;
-      padding: 15px;
-      border: 1px solid #ddd;
       border-radius: 10px;
-      width: 220px;
-      text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
       transition: transform 0.2s;
     }
 
     .product:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
     .product img {
-      width: 100%;
-      height: 180px;
+      max-width: 100%;
+      height: 200px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .product p {
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .order-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .order-btn:hover {
+      background: #1da851;
     }
 
     footer {
@@ -71,7 +90,7 @@
       color: #fff;
       text-align: center;
       padding: 15px;
-      margin-top: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -85,35 +104,55 @@
     </nav>
   </header>
 
-  <section class="products">
+  <div class="products-container">
     <div class="product">
       <img src="bat.jpg" alt="Cricket Bat">
       <h3>Cricket Bat</h3>
-      <p>Premium English Willow Bat</p>
-      <p><b>Price: PKR 15,000</b></p>
+      <p>English Willow Grade 1</p>
+      <p><b>PKR 25,000</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
     </div>
 
     <div class="product">
       <img src="gloves.jpg" alt="Batting Gloves">
       <h3>Batting Gloves</h3>
-      <p>Durable & Comfortable</p>
-      <p><b>Price: PKR 3,500</b></p>
+      <p>Comfortable & Durable</p>
+      <p><b>PKR 5,500</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
+    </div>
+
+    <div class="product">
+      <img src="pads.jpg" alt="Batting Pads">
+      <h3>Batting Pads</h3>
+      <p>Lightweight Protection</p>
+      <p><b>PKR 7,500</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
     </div>
 
     <div class="product">
       <img src="helmet.jpg" alt="Cricket Helmet">
-      <h3>Cricket Helmet</h3>
-      <p>Strong & Lightweight</p>
-      <p><b>Price: PKR 5,000</b></p>
+      <h3>Helmet</h3>
+      <p>Strong & Safe</p>
+      <p><b>PKR 6,000</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
     </div>
 
     <div class="product">
-      <img src="pads.jpg" alt="Leg Pads">
-      <h3>Leg Pads</h3>
-      <p>Extra Protection for Batsmen</p>
-      <p><b>Price: PKR 4,500</b></p>
+      <img src="ball.jpg" alt="Cricket Ball">
+      <h3>Cricket Ball</h3>
+      <p>Hand Stitched Leather</p>
+      <p><b>PKR 1,200</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
     </div>
-  </section>
+
+    <div class="product">
+      <img src="kitbag.jpg" alt="Kit Bag">
+      <h3>Kit Bag</h3>
+      <p>Spacious & Durable</p>
+      <p><b>PKR 9,000</b></p>
+      <a href="https://wa.me/923294542540" target="_blank" class="order-btn">Order on WhatsApp</a>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 Muntaha Sports | All Rights Reserved</p>
